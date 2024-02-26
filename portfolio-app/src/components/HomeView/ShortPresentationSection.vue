@@ -119,6 +119,28 @@ section.short-presentation {
         }
       }
     }
+
+    @media screen and (min-width: 992px) {
+      .wrapper {
+        flex-direction: row;
+
+        .title {
+          align-self: flex-start;
+
+          h1, p {
+            text-align: left;
+          }
+
+          h1 {
+            font-size: 3rem;
+          }
+
+          a {
+            align-self: flex-end;
+          }
+        }
+      }
+    }
   }
 
   .scroll {
