@@ -1,5 +1,6 @@
 <script setup>
 import Logo from "@/components/Logo.vue";
+import MenuHamburguer from "@/components/icons/MenuHamburguer.vue";
 
 </script>
 
@@ -10,6 +11,10 @@ import Logo from "@/components/Logo.vue";
     </router-link>
 
     <nav>
+      <button>
+        <MenuHamburguer class="hamburger-menu-icon" />
+      </button>
+
       <ul>
         <li>
           <router-link to="/contacts">Contatos</router-link>
@@ -30,35 +35,67 @@ import Logo from "@/components/Logo.vue";
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 4rem;
-    margin-top: 1rem;
+    padding:  1rem;
+
+    nav:has(button:focus) ul {
+      display: flex;
+    }
+
+    nav:has(a:hover) ul {
+      display: flex;
+    }
 
     nav {
+      button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        .hamburger-menu-icon {
+          width: 3rem;
+        }
+      }
+
+      @media screen and (min-width: 5768px) {
+        button {
+          display: none;
+        }
+      }
+
       ul {
-        list-style: none;
-        display: flex;
+        display: none;
+        flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        background: #fff;
+        position: absolute;
+        right: 1rem;
+        top: 0;
+        border-radius: 2rem;
+        padding: 0;
 
         li {
+          width: 100%;
+          height: 100%;
           a {
-            text-decoration: none;
+            display: block;
             color: #000;
-            background-color: #f0f0f0;
-            padding: 0.5rem 2rem;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #000;
-            border-top-right-radius: .5rem;
-            border-top-left-radius: .5rem;
-
-            transition: all .2s;
+            padding: 1rem 3rem;
+            font-size: 1.3rem;
           }
 
-          a:hover {
-            background-color: #000;
-            color: #fff;
+          a:hover, a:active {
+            opacity: .7;
           }
         }
+      }
+
+      ul::after {
+        content: 'x';
+        width: 100%;
+        display: block;
+        text-align: center;
+        font-size: 2rem;
+        cursor: pointer;
       }
     }
   }
