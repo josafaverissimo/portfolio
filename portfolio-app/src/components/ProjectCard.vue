@@ -14,7 +14,8 @@ const props = defineProps(['src'])
 <style scoped>
 .card {
   img {
-    width: 30rem;
+    width: 100%;
+    max-width: 100vw;
     object-fit: contain;
     border-radius: 1rem;
   }
