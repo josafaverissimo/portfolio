@@ -29,7 +29,7 @@ import InstagramIcon from "@/components/icons/InstagramIcon.vue";
     </div>
 
     <div class="scroll">
-      <span>scroll</span>
+      <span>Conheça-me</span>
     </div>
   </section>
 </template>
@@ -38,22 +38,29 @@ import InstagramIcon from "@/components/icons/InstagramIcon.vue";
 section.short-presentation {
   flex-grow: 1;
   flex-basis: 80vh;
+  padding: 0 1rem;
 
   .short-presentation-container {
     display: flex;
     flex-grow: 1;
     justify-content: center;
+    max-width: 100%;
 
     .wrapper {
       display: flex;
+      flex-direction: column;
+      align-items: center;
       gap: 2rem;
 
       .title {
         display: flex;
         flex-direction: column;
+        max-width: 100vw;
+        text-align: center;
+        padding: 0 1rem;
 
         h1 {
-          font-size: 3rem;
+          font-size: 2rem;
           margin: 0;
         }
 
@@ -68,7 +75,7 @@ section.short-presentation {
           background-color: transparent;
           border: 2px solid #000;
           padding: .5rem 2rem;
-          align-self: flex-end;
+          align-self: center;
           border-radius: .5rem;
           margin-top: .5rem;
 
@@ -83,10 +90,18 @@ section.short-presentation {
 
       .img-wrapper {
         img {
-          width: 25rem;
-          height: 25rem;
+          width: 100%;
+          height: 100%;
+          max-width: 25rem;
           object-fit: cover;
           border-radius: 100%;
+        }
+
+        @media screen and (min-width: 768px) {
+          img {
+            width: 25rem;
+            height: 25rem;
+          }
         }
 
         .social-links {
@@ -99,7 +114,7 @@ section.short-presentation {
             display: block;
             text-decoration: none;
             color: #000;
-            width: 3rem;
+            width: 2rem;
             height: 100%;
           }
         }
@@ -110,8 +125,8 @@ section.short-presentation {
   .scroll {
     position: absolute;
     z-index: -1;
-    bottom: 3rem;
-    left: 10rem;
+    bottom: -1.3rem;
+    right: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -126,7 +141,7 @@ section.short-presentation {
     content: "";
     background-color: #000;
     width: 2px;
-    height: 10rem;
+    height: 7rem;
   }
 }
 </style>
