@@ -47,31 +47,52 @@ import AngularIcon from "@/components/icons/AngularIcon.vue";
 <style scoped>
 section.habilities {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
   .habilities-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     max-width: 80%;
 
     h2 {
-      align-self: flex-end;
       font-size: 3rem;
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: 992px) {
+      h2 {
+        margin-bottom: 4rem;
+      }
     }
 
     .habilities-logo {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: 5rem;
+      grid-template-columns: 1fr;
 
       .others-logo {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
 
         svg {
           height: 70%;
           width: 70%;
         }
+      }
+
+      @media screen and (min-width: 992px) {
+        .others-logo {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+    }
+
+    @media screen and (min-width: 992px) {
+      .habilities-logo {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 5rem;
       }
     }
   }
