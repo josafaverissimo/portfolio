@@ -21,6 +21,7 @@ import RightTriangle from "@/components/Separators/RightTriangle.vue";
   main {
     display: flex;
     flex-direction: column;
+    padding-bottom: 5rem;
 
     section {
       display: flex;
