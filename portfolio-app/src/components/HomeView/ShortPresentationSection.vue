@@ -90,9 +90,8 @@ section.short-presentation {
 
       .img-wrapper {
         img {
-          width: 100%;
-          height: 100%;
-          max-width: 25rem;
+          width: 15rem;
+          height: 15rem;
           object-fit: cover;
           border-radius: 100%;
         }
@@ -125,7 +124,7 @@ section.short-presentation {
   .scroll {
     position: absolute;
     z-index: -1;
-    bottom: -1.3rem;
+    bottom: -5rem;
     right: 1rem;
     display: flex;
     flex-direction: column;
@@ -141,7 +140,7 @@ section.short-presentation {
     content: "";
     background-color: #000;
     width: 2px;
-    height: 7rem;
+    height: 9rem;
   }
 }
 </style>
