@@ -18,10 +18,6 @@ import RightTriangle from "@/components/Separators/RightTriangle.vue";
 </template>
 
 <style scoped>
-  h1 {
-    color: red;
-  }
-
   main {
     display: flex;
     flex-direction: column;
