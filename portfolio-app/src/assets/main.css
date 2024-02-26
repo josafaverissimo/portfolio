@@ -7,7 +7,15 @@
     --bk-xl: 1920px;
 }
 
-html{scroll-behavior:smooth}
+html{
+    scroll-behavior:smooth
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: 'Josefin Sans', sans-serif;
