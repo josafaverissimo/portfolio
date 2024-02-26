@@ -42,7 +42,8 @@ import ArrowRightIcon from "@/components/icons/ArrowRightIcon.vue";
 
 <style scoped>
 section.projects {
-  flex-basis: 80vh;
+  align-self: center;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,8 +59,8 @@ section.projects {
     }
 
     .projects-cards-container {
-      width: 100%;
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
       flex-wrap: wrap;
     }
