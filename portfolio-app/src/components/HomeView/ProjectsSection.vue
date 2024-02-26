@@ -61,6 +61,7 @@ section.projects {
       width: 100%;
       display: flex;
       gap: 1rem;
+      flex-wrap: wrap;
     }
 
     .see-all {
@@ -104,15 +105,15 @@ section.projects {
         .btn-send-message {
           display: block;
           text-decoration: none;
-          color: var(--about-me-background-color);
-          border: 2px solid var(--about-me-background-color);
+          color: #020100;
+          border: 2px solid #020100;
           transition: all .2s;
           padding: .5rem 2rem;
           border-radius: 1rem;
         }
 
         .btn-send-message:hover {
-          background-color: var(--about-me-background-color);
+          background-color: #020100;
           color: #fff;
         }
       }
