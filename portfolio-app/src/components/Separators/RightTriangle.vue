@@ -15,6 +15,7 @@ const props = defineProps(['backgroundColor'])
     width:100%;
     height:100px;
     background: linear-gradient(to left bottom, transparent 49%, v-bind("props.backgroundColor") 50%);
+    margin-bottom: -1px;
   }
 
   div.right-triangle-separator::after {
@@ -23,5 +24,6 @@ const props = defineProps(['backgroundColor'])
     width:100%;
     height:100px;
     background: linear-gradient(to right top, transparent 49%, v-bind("props.backgroundColor") 50%);
+    margin-top: -1px;
   }
 </style>
