@@ -76,5 +76,42 @@ section.about-me {
       }
     }
   }
+
+  @media screen and (min-width: 992px) {
+    .about-me-container {
+      flex-direction: row;
+      width: 50%;
+
+      .title-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        align-self: flex-start;
+
+        p {
+          width: 70%;
+          align-self: center;
+          text-align: left;
+        }
+      }
+
+      .description {
+        flex-basis: 50%;
+
+        p {
+          text-align: right;
+        }
+
+        .see-more {
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1336px) {
+    .about-me-container {
+      gap: 5rem;
+    }
+  }
 }
 </style>
