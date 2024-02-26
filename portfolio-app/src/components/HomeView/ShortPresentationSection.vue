@@ -146,7 +146,7 @@ section.short-presentation {
   .scroll {
     position: absolute;
     z-index: -1;
-    bottom: -5rem;
+    bottom: -8rem;
     right: 1rem;
     display: flex;
     flex-direction: column;
