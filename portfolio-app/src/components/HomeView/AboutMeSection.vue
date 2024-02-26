@@ -1,11 +1,12 @@
-<script setup></script>
+<script setup>
+</script>
 
 <template>
   <section class="about-me">
     <div class="about-me-container">
       <div class="title-wrapper">
-        <p>Sobre mim</p>
         <h2>Quem é Josafá?</h2>
+        <p>Sobre mim</p>
       </div>
 
       <div class="description">
@@ -26,19 +27,21 @@
 section.about-me {
   background-color: #020100;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   color: #fff;
   padding: 5rem 0;
 
   .about-me-container {
-    max-width: 50%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
 
     .title-wrapper {
-      flex-basis: 50%;
-
       p, h2 {
         margin: 0;
+        text-align: center;
       }
 
       h2 {
@@ -47,12 +50,15 @@ section.about-me {
     }
 
     .description {
-      flex-basis: 70%;
       display: flex;
       flex-direction: column;
 
+      p {
+        text-align: center;
+      }
+
       .see-more {
-        align-self: flex-end;
+        align-self: center;
         display: inline-block;
         text-decoration: none;
         background-color: transparent;
