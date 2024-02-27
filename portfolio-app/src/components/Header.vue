@@ -37,15 +37,8 @@ import MenuHamburguer from "@/components/icons/MenuHamburguer.vue";
     align-items: center;
     padding:  1rem;
 
-    nav:has(button:focus) ul {
-      display: flex;
-    }
-
-    nav:has(a:hover) ul {
-      display: flex;
-    }
-
     nav {
+      position: relative;
       button {
         background-color: transparent;
         border: none;
@@ -56,20 +49,25 @@ import MenuHamburguer from "@/components/icons/MenuHamburguer.vue";
         }
       }
 
-      @media screen and (min-width: 5768px) {
-        button {
-          display: none;
-        }
+      &:focus-within ul {
+        opacity: 1;
+        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        transform: scaleX(1) scaleY(1);
+        transition-duration: 100ms;
       }
 
       ul {
-        display: none;
+        transform: scaleX(0) scaleY(0);
+        transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+        transition: all 75ms;
+        opacity: 0;
+        display: flex;
         flex-direction: column;
         align-items: center;
         background: #fff;
         position: absolute;
         right: 1rem;
-        top: 0;
+        top: 100%;
         border-radius: 2rem;
         padding: 0;
 
@@ -81,6 +79,7 @@ import MenuHamburguer from "@/components/icons/MenuHamburguer.vue";
             color: #000;
             padding: 1rem 3rem;
             font-size: 1.3rem;
+            text-wrap: nowrap;
           }
 
           a:hover, a:active {
@@ -91,11 +90,15 @@ import MenuHamburguer from "@/components/icons/MenuHamburguer.vue";
 
       ul::after {
         content: 'x';
-        width: 100%;
+        width: 30%;
+        height: 100%;
         display: block;
         text-align: center;
-        font-size: 2rem;
+        border-radius: 1rem;
+        font-size: 1.5rem;
         cursor: pointer;
+        color: var(--white);
+        background-color: var(--black);
       }
     }
   }
