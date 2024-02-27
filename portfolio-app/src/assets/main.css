@@ -2,9 +2,8 @@
 @import './fonts.css';
 
 :root {
-    --bk-md: 768px;
-    --bk-lg: 1366px;
-    --bk-xl: 1920px;
+    --white: #fff;
+    --black: #000;
 }
 
 html{
