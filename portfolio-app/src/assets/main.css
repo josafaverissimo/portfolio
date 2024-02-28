@@ -4,6 +4,8 @@
 :root {
     --white: #fff;
     --black: #000;
+    --primary-font: 'Poppins';
+    --secondary-font: 'Josefin Sans';
 }
 
 html{
@@ -17,7 +19,7 @@ html{
 }
 
 body {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: var(--primary-font), sans-serif;
     background-image: url(/noise.png);
 }
 
