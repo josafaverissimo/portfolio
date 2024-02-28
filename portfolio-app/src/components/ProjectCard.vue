@@ -13,11 +13,15 @@ const props = defineProps(['src'])
 
 <style scoped>
 .card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
   img {
     width: 100%;
     max-width: 100vw;
     object-fit: contain;
-    border-radius: 1rem;
+    aspect-ratio: 16/9;
   }
 }
 </style>
