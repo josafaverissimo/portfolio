@@ -46,12 +46,14 @@ section.about-me {
 
       h2 {
         font-size: 3rem;
+        font-family: var(--secondary-font), sans-serif;
       }
     }
 
     .description {
       display: flex;
       flex-direction: column;
+      gap: 1rem;
 
       p {
         text-align: center;
