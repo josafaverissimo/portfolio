@@ -17,7 +17,7 @@ import MenuHamburguer from "@/components/icons/MenuHamburguer.vue";
 
       <ul>
         <li>
-          <router-link to="/contacts">Contatos</router-link>
+          <router-link to="/contacts">Contato</router-link>
         </li>
         <li>
           <router-link to="/projects">Trabalhos</router-link>
@@ -51,25 +51,24 @@ import MenuHamburguer from "@/components/icons/MenuHamburguer.vue";
 
       &:focus-within ul {
         opacity: 1;
-        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-        transform: scaleX(1) scaleY(1);
-        transition-duration: 100ms;
+        animation: fadeInRightTop .3s;
+        visibility: visible;
       }
 
       ul {
-        transform: scaleX(0) scaleY(0);
-        transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
         transition: all 75ms;
         opacity: 0;
+        visibility: hidden;
         display: flex;
         flex-direction: column;
         align-items: center;
         background: #fff;
         position: absolute;
-        right: 1rem;
-        top: 100%;
-        border-radius: 2rem;
+        right: 0;
+        border-radius: .7rem;
         padding: 0;
+        border: 2px solid #aaa;
+        box-shadow: 5px 5px 0 1px #aaa;
 
         li {
           width: 100%;
@@ -79,7 +78,7 @@ import MenuHamburguer from "@/components/icons/MenuHamburguer.vue";
             color: #000;
             padding: 1rem 3rem;
             font-size: 1.3rem;
-            text-wrap: nowrap;
+            white-space: nowrap;
           }
 
           a:hover, a:active {
@@ -90,16 +89,31 @@ import MenuHamburguer from "@/components/icons/MenuHamburguer.vue";
 
       ul::after {
         content: 'x';
-        width: 30%;
+        width: 100%;
         height: 100%;
         display: block;
         text-align: center;
-        border-radius: 1rem;
-        font-size: 1.5rem;
+        font-size: 2.3rem;
         cursor: pointer;
-        color: var(--white);
-        background-color: var(--black);
       }
+    }
+  }
+
+  @keyframes fadeInRightTop {
+    0% {
+      top: -5px;
+      right: -5px;
+      opacity: .2;
+    }
+    50% {
+      top: 120%;
+      right: 20%;
+      opacity: .5;
+    }
+    100% {
+      opacity: 1;
+      top: 100%;
+      right: 0;
     }
   }
 </style>
