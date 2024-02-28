@@ -17,7 +17,7 @@ import MenuHamburguer from "@/components/icons/MenuHamburguer.vue";
 
       <ul>
         <li>
-          <router-link to="/contacts">Contatos</router-link>
+          <router-link to="/contacts">Contato</router-link>
         </li>
         <li>
           <router-link to="/projects">Trabalhos</router-link>
@@ -52,11 +52,13 @@ import MenuHamburguer from "@/components/icons/MenuHamburguer.vue";
       &:focus-within ul {
         opacity: 1;
         animation: fadeInRightTop .3s;
+        visibility: visible;
       }
 
       ul {
         transition: all 75ms;
         opacity: 0;
+        visibility: hidden;
         display: flex;
         flex-direction: column;
         align-items: center;
