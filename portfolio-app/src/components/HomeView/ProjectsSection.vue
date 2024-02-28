@@ -1,28 +1,88 @@
 <script setup>
 import ProjectCard from "@/components/ProjectCard.vue";
 import ArrowRightIcon from "@/components/icons/ArrowRightIcon.vue";
+import { Swiper } from "swiper";
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import {onMounted} from "vue";
+
+import 'swiper/css/bundle';
+import 'swiper/css/pagination';
+
+let swiper = {}
+
+onMounted(() => {
+  swiper = new Swiper('.swiper',{
+    modules: [Navigation, Pagination, Autoplay],
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets'
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    autoplay: {
+      delay: 5000
+    }
+  })
+})
+
 </script>
 
 <template>
   <section id="projects" class="projects">
+
     <div class="projects-container">
       <h2>Projetos</h2>
 
-      <div class="projects-cards-container">
-        <ProjectCard src="/images/projects/atacadao-portal.png">
-          Portal feito para o atacadão para auxiliar na obtenção de dados como os ramais, links e documentos
-          da empresa.
-        </ProjectCard>
+      <div class="swiper">
+        <div class="swiper-pagination"></div>
 
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <h3 class="projects__title">FTotem (CMS)</h3>
 
-        <ProjectCard src="/images/projects/ftotem.png">
-          Sistema composto por um gerenciador de dados (eventos, clientes, usuários e vídeos) e um sistema
-          para gravar vídeos através da câmera do dispositivo.
-        </ProjectCard>
+            <ProjectCard src="/images/projects/ftotem-cms.webp">
+              Sistema feito para gerenciar dados de eventos, clientes, usuários e vídeos.
+            </ProjectCard>
+          </div>
+          <div class="swiper-slide">
+            <h3 class="projects__title">FTotem</h3>
 
-        <ProjectCard src="/images/projects/xmgoi-webapp.png">
-          Sistema para gerar pdf da lista de produtos que são negociados entre o cliente e a gerência.
-        </ProjectCard>
+            <ProjectCard src="/images/projects/ftotem.webp">
+              Aplicação web para os convidados do evento gravarem vídeos.
+            </ProjectCard>
+          </div>
+
+          <div class="swiper-slide">
+            <h3 class=projects__title>AluraBooks</h3>
+            <ProjectCard src="/images/projects/alurabooks.webp">
+              Projeto desenvolvido durante o curso HTML e CSS: responsividade e mobile-first da alura.
+            </ProjectCard>
+          </div>
+
+          <div class="swiper-slide">
+            <h3 class="projects__title">Portal Atacadão</h3>
+
+            <ProjectCard src="/images/projects/atacadao-portal.webp" style="background: #fff">
+              Portal feito para o atacadão para auxiliar na busca de dados como os ramais, links e outros documentos
+              da empresa.
+            </ProjectCard>
+          </div>
+
+          <div class="swiper-slide">
+            <h3 class="projects__title">Xmgoi13 WebApp</h3>
+
+            <ProjectCard src="/images/projects/xmgoi13.webp">
+              Sistema para gerar pdf da lista de produtos que são negociados entre o cliente e a gerência.
+            </ProjectCard>
+          </div>
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
 
       <router-link to="/projects" class="see-all">
@@ -41,28 +101,38 @@ import ArrowRightIcon from "@/components/icons/ArrowRightIcon.vue";
 </template>
 
 <style scoped>
+.swiper {
+  max-width: 100%;
+
+  .swiper-pagination {
+    position: static;
+  }
+
+  .swiper-wrapper {
+    position: relative;
+  }
+}
+
 section.projects {
   align-self: center;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 100%;
+  box-shadow: 0 0 10px #f0f0f0  ;
 
   .projects-container {
     display: flex;
     flex-direction: column;
-    max-width: 80%;
+    max-width: 100%;
+    gap: 2rem;
 
     h2 {
       font-size: 3rem;
       text-align: center;
-    }
-
-    .projects-cards-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      flex-wrap: wrap;
     }
 
     .see-all {
@@ -98,7 +168,7 @@ section.projects {
 
       .send-message {
         p {
-          font-size: 1.5rem;
+          font-size: 1.1rem;
           text-align: right;
           margin: 0;
         }
@@ -119,6 +189,24 @@ section.projects {
         }
       }
     }
+
+    .projects__title {
+      font-weight: normal;
+    }
+
+    @media screen and (min-width: 768px) {
+      & {
+        max-width: 768px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    width: 90%;
+  }
+
+  @media screen and (min-width: 1336px) {
+    width: 70%;
   }
 }
 </style>
