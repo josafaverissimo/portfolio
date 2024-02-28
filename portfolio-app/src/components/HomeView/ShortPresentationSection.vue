@@ -70,6 +70,7 @@ section.short-presentation {
         h1 {
           font-size: 2rem;
           margin: 0;
+          font-family: var(--secondary-font), sans-serif;
         }
 
         p {
