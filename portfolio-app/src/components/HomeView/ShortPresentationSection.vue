@@ -32,7 +32,7 @@ import GithubIcon from "@/components/icons/GithubIcon.vue";
       </div>
     </div>
 
-    <div class="scroll">
+    <div class="scrollIndicator">
       <span>Conheça-me</span>
     </div>
   </section>
@@ -42,12 +42,16 @@ import GithubIcon from "@/components/icons/GithubIcon.vue";
 section.short-presentation {
   flex-grow: 1;
   flex-basis: 80vh;
+  flex-direction: column;
   padding: 0 1rem;
+  gap: 3rem;
 
   .short-presentation-container {
-    display: flex;
     flex-grow: 1;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    height: 50vh;
     max-width: 100%;
 
     .wrapper {
@@ -122,51 +126,49 @@ section.short-presentation {
           }
         }
       }
-    }
 
-    @media screen and (min-width: 992px) {
-      .wrapper {
-        flex-direction: row;
+      @media screen and (min-width: 992px) {
+        & {
+          flex-direction: row;
 
-        .title {
-          align-self: flex-start;
+          .title {
+            align-self: flex-start;
 
-          h1, p {
-            text-align: left;
-          }
+            h1, p {
+              text-align: left;
+            }
 
-          h1 {
-            font-size: 3rem;
-          }
+            h1 {
+              font-size: 3rem;
+            }
 
-          a {
-            align-self: flex-end;
+            a {
+              align-self: flex-end;
+            }
           }
         }
       }
     }
   }
 
-  .scroll {
-    position: absolute;
-    z-index: -1;
-    bottom: -8rem;
-    right: 1rem;
+  .scrollIndicator {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: -5rem;
 
     span {
       display: block;
     }
-  }
 
-  .scroll::after {
-    display: block;
-    content: "";
-    background-color: #000;
-    width: 2px;
-    height: 9rem;
+    &::after {
+      display: block;
+      content: "";
+      background-color: #000;
+      width: 2px;
+      height: 5rem;
+
+    }
   }
 }
 </style>
