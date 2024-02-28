@@ -1,6 +1,7 @@
 <script setup>
 import LinkedinIcon from "@/components/icons/LinkedinIcon.vue";
 import InstagramIcon from "@/components/icons/InstagramIcon.vue";
+import GithubIcon from "@/components/icons/GithubIcon.vue";
 </script>
 
 <template>
@@ -17,11 +18,14 @@ import InstagramIcon from "@/components/icons/InstagramIcon.vue";
           <img src="/me.webp" alt="Foto do Josafá"/>
 
           <div class="social-links">
-            <a href="https://instagram.com/josafa.verissimo" target="_blank">
-              <InstagramIcon />
-            </a>
             <a href="https://linkedin.com/in/josafaverissimo" target="_blank">
               <LinkedinIcon />
+            </a>
+            <a href="https://github.com/josafaverissimo" target="_blank">
+              <GithubIcon />
+            </a>
+            <a href="https://instagram.com/josafa.verissimo" target="_blank">
+              <InstagramIcon />
             </a>
           </div>
         </div>
