@@ -41,7 +41,7 @@ import GithubIcon from "@/components/icons/GithubIcon.vue";
 <style scoped>
 section.short-presentation {
   flex-grow: 1;
-  flex-basis: 80vh;
+  flex-basis: 75vh;
   flex-direction: column;
   padding: 0 1rem;
   gap: 3rem;
