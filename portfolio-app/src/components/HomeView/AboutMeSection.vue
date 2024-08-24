@@ -11,10 +11,10 @@
 
       <div class="description">
         <p>
-          Estudante de Ciência da Computação, desempenhando o papel de suporte técnico.
-          Possuindo uma sólida compreensão de problemas, mais de cinco anos de
-          experiência aliando a experiência acadêmica com a prática profissional. Alto nível
-          técnico em: PHP, Javascript, MySQL, Docker, Vue.js, Angular e React.js.
+          Desenvolvedor Web Fullstack, com foco em backend.
+          Mais de cinco anos de experiência aliando experiência acadêmica com a
+          prática profissional. Alto nível técnico em: Python, Django, PostgreSQL,
+          Docker, Vue.js, React.js e Angular.
         </p>
 
         <router-link to="/about" class="see-more">Veja mais</router-link>
